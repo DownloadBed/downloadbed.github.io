@@ -8,23 +8,39 @@
     23 Dec 2023 (NPN)
 */
 
-//create a "game" object
-function Game(strName, intVals, imgThumbnail) {
-    this.strName = "Default Name";
-    this.intVals = [];
-    this.imgThumbnail = "./resources/default-thumbnail.png";
+var currentGames = [
+    ["Be The Pin (Remastered)", ["PC", "Mobile", "itch.io", "Play Store"], "./resources/default-thumbnail.png", ""],
+    ["Quest of the Millionth Trade", ["PC", "Steam", "itch.io"], "./resources/default-thumbnail.png", ""],
+    ["Mighty Sudoku", ["Mobile", "App Store", "Play Store"], "./resources/default-thumbnail.png", ""]
+];
+
+//function when options is selected
+function selectShopTag(e) {
+    var target = e.target;
+    if(target instanceof HTMLLIElement) {
+        //bold, underline, and add "X " on word
+        target.classList.add("shop-selected");
+        //remove all games by display none
+
+        //for each game stored
+        for (var i = 0; i < currentGames.length; i++) {
+            //if value(s) is same as button pressed
+            if (currentGames[i][1].includes(target.textContent.toString())) {
+                //get game gallery child, then dinsplay none, set bool, etc (look at board)
+            } else {
+                console.log("not in");
+            }
+                //append game
+            //else
+                //do nothing
+        }
+    }
+    
+    e.stopPropagation();
 }
 
-var beThePin = Game("Be The Pin (Remastered)", ["PC", "Mobile", "itch.io", "Play Store"], "./resources/default-thumbnail.png");
-var questTrade = Game("Quest of the Millionth Trade", ["PC", "Steam", "itch.io"], "./resources/default-thumbnail.png");
-var mightySudoku = Game("Mighty Sudoku", ["Mobile", "App Store", "Play Store"], "./resources/default-thumbnail.png");
-var currentGames = [beThePin, questTrade, mightySudoku];
-
 //for a button press on shop select
-    //bold, underline, and add "X " on word
-    //remove all games
-    //for each game stored
-        //if value(s) is same as button pressed
-            //append game
-        //else
-            //do nothing
+var shopSelect = document.getElementById("game-sort");
+shopSelect.addEventListener('click', function(e) {
+    selectShopTag(e);
+});

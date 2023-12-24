@@ -298,3 +298,8 @@ footer {
     padding-top: 20px;
     margin-top: 0;
 }
+
+.shop-selected {
+    text-decoration: underline;
+    font-weight: bold;
+}
