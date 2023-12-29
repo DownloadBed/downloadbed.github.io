@@ -7,6 +7,7 @@
     25 Nov 2023 (NPN)
     20 Dec 2023 (NPN)
     23 Dec 2023 (NPN)
+    28 Dec 2023 (NPN)
 */
 
 :root {
@@ -142,7 +143,7 @@ footer {
 /* Featured Section */
 
 #featured {
-    padding: 0 50px 0 50px;
+    padding: 0 50px 50px 50px;
 }
 
 #featured .video-welcome {
@@ -174,29 +175,6 @@ footer {
     right: 0;
     width: 100%;
     height: 100%;
-}
-
-#cap-trailer-gal {
-    display: flex;
-}
-
-#caption {
-    padding: 1rem;
-}
-
-    /* Trailer Gallery */
-
-#trailer-gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.gallery-holder iframe {
-    width: 300px;
-    height: 100%;
-    padding: 5px;
 }
 
 /* Motto */
@@ -278,7 +256,7 @@ footer {
 
 .side-bar {
     position: relative;
-    top: 0px;
+    top: -50px;
     right: 50px;
     float: right;
 }
