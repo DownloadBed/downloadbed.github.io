@@ -281,3 +281,21 @@ footer {
     text-decoration: underline;
     font-weight: bold;
 }
+
+/* Text Formatting */
+
+.text-center {
+    text-align: center;
+}
+
+.bottom-padding {
+    padding: 0 0 20px 0;
+}
+
+.remove-header-margin h1 {
+    margin: 0;
+}
+
+form {
+    padding: 20px 0 20px 0;
+}
